@@ -11,6 +11,13 @@
 |
 */
 
+// aka annon function
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+/* About Page */
+Route::get('about', function() {
+    return view('pages.about');
 });
