@@ -13,12 +13,17 @@
 
 // aka annon function
 
-Route::get('/', function () {
-    $people = ["Tom", "Kitty", "Morris"];
-    return view('welcome', compact('people'));
-});
+// Route::get('/', function () {
+//     $people = ["Tom", "Kitty", "Morris"];
+//     return view('welcome', compact('people'));
+// });
+//
+// /* About Page */
+// Route::get('about', function() {
+//     return view('pages.about');
+// });
 
-/* About Page */
-Route::get('about', function() {
-    return view('pages.about');
-});
+/* app/Http/contollers */
+Route::get('/', 'PagesController@home');
+
+Route::get('about', 'PagesController@about');
