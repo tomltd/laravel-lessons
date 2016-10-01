@@ -65,6 +65,23 @@
         </style>
     </head>
     <body>
+
+        @if (empty($people))
+
+            <p>There are no people</p>
+        @else
+            <p>The people are:</p>
+
+        @endif
+
+        @foreach ($people as $person)
+
+
+            <li> {{ $person }} </li>
+
+
+        @endforeach
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

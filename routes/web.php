@@ -14,7 +14,8 @@
 // aka annon function
 
 Route::get('/', function () {
-    return view('welcome');
+    $people = ["Tom", "Kitty", "Morris"];
+    return view('welcome', compact('people'));
 });
 
 /* About Page */
